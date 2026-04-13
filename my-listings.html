@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Marketplace | My Listings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-logo-wrap">
+            <div class="market-logo">
+              <div class="bag-shape"></div>
+              <div class="cap-top"></div>
+              <div class="cap-line"></div>
+            </div>
+          </div>
+          <div>
+            <div class="brand-title">Campus Marketplace</div>
+            <div class="brand-subtitle">Student Buy & Sell</div>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="browse.html">Browse Listings</a>
+          <a class="nav-link" href="add-product.html">Add Product</a>
+          <a class="nav-link active" href="my-listings.html">My Listings</a>
+          <a class="nav-link admin-only" href="admin-panel.html">Admin Panel</a>
+        </nav>
+
+        <div class="header-icons">
+          <button class="icon-btn" type="button">🔔</button>
+          <a class="icon-btn" href="login.html">👤</a>
+          <button class="icon-btn mobile-menu-btn" type="button">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-intro">
+      <div class="container">
+        <h1>Manage Your Listings</h1>
+        <p>Review all your posts, switch their status, open the product page, or delete anything you no longer want to sell.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="container card" style="padding:24px;">
+      <div class="toolbar-row">
+        <div class="listing-tabs">
+          <button class="listing-tab active" data-filter="all" type="button">All</button>
+          <button class="listing-tab" data-filter="active" type="button">Active</button>
+          <button class="listing-tab" data-filter="sold" type="button">Sold</button>
+        </div>
+        <a class="btn btn-solid-blue" href="add-product.html">+ Add New Listing</a>
+      </div>
+
+      <div class="table-shell">
+        <table class="listing-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Listed On</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="myListingsBody"></tbody>
+        </table>
+      </div>
+
+      <div id="myListingsEmpty" class="empty-state" style="display:none;">
+        <h3>No listings found</h3>
+        <p>There are no products in this section.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer section">
+    <div class="container footer-shell">
+      <div class="footer-bottom">
+        <span>© 2026 Campus Marketplace</span>
+        <span>My listings page</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

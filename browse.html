@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Marketplace | Browse Listings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-logo-wrap">
+            <div class="market-logo">
+              <div class="bag-shape"></div>
+              <div class="cap-top"></div>
+              <div class="cap-line"></div>
+            </div>
+          </div>
+          <div>
+            <div class="brand-title">Campus Marketplace</div>
+            <div class="brand-subtitle">Student Buy & Sell</div>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="browse.html">Browse Listings</a>
+          <a class="nav-link" href="add-product.html">Add Product</a>
+          <a class="nav-link" href="my-listings.html">My Listings</a>
+          <a class="nav-link admin-only" href="admin-panel.html">Admin Panel</a>
+        </nav>
+
+        <div class="header-icons">
+          <button class="icon-btn" type="button">🔔</button>
+          <a class="icon-btn" href="login.html">👤</a>
+          <button class="icon-btn mobile-menu-btn" type="button">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-intro">
+      <div class="container intro-grid">
+        <div>
+          <h1>Browse Listings</h1>
+          <p>Search products, filter by category, choose a status, and explore all student listings in one place.</p>
+        </div>
+        <img src="assets/images/student-browse-hero.png" alt="Student hero" class="intro-image" onerror="this.style.display='none'">
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="container panel search-filter-bar">
+      <input id="searchInput" class="search-field" type="text" placeholder="Search by title, category, seller..." />
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option>Books</option>
+        <option>Phones</option>
+        <option>Laptops</option>
+        <option>Audio</option>
+        <option>Furniture</option>
+        <option>Tablets</option>
+      </select>
+      <select id="statusFilter">
+        <option value="">All Status</option>
+        <option value="available">Available</option>
+        <option value="sold">Sold</option>
+        <option value="reported">Reported</option>
+      </select>
+      <select id="priceFilter">
+        <option value="">All Prices</option>
+        <option value="0-300">0 - 300 SR</option>
+        <option value="301-1000">301 - 1000 SR</option>
+        <option value="1001-2000">1001 - 2000 SR</option>
+        <option value="2001+">2000+ SR</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div id="browseGrid" class="grid-products"></div>
+    </div>
+  </section>
+
+  <footer class="footer section">
+    <div class="container footer-shell">
+      <div class="footer-bottom">
+        <span>© 2026 Campus Marketplace</span>
+        <span>Browse listings page</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

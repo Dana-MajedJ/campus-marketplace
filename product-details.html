@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Marketplace | Product Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-logo-wrap">
+            <div class="market-logo">
+              <div class="bag-shape"></div>
+              <div class="cap-top"></div>
+              <div class="cap-line"></div>
+            </div>
+          </div>
+          <div>
+            <div class="brand-title">Campus Marketplace</div>
+            <div class="brand-subtitle">Student Buy & Sell</div>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="browse.html">Browse Listings</a>
+          <a class="nav-link" href="add-product.html">Add Product</a>
+          <a class="nav-link" href="my-listings.html">My Listings</a>
+          <a class="nav-link admin-only" href="admin-panel.html">Admin Panel</a>
+        </nav>
+
+        <div class="header-icons">
+          <button class="icon-btn" type="button">🔔</button>
+          <a class="icon-btn" href="login.html">👤</a>
+          <button class="icon-btn mobile-menu-btn" type="button">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-intro">
+      <div class="container">
+        <h1 id="detailTitle">Product Details</h1>
+        <p>View full listing information, product condition, seller details, and send a direct message.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="container two-col">
+      <div class="card product-gallery">
+        <div class="detail-image" id="detailImage"></div>
+      </div>
+
+      <div class="card product-detail-card">
+        <div class="details-top">
+          <div>
+            <h2 id="detailTitleSecondary" class="section-title detail-subtitle">Listing Overview</h2>
+            <div id="detailPrice" class="price">0 SR</div>
+          </div>
+          <div id="detailStatus" class="status-pill normal">available</div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-chip">Condition: <span id="detailCondition">-</span></div>
+          <div class="info-chip">Category: <span id="detailCategory">-</span></div>
+        </div>
+
+        <p id="detailDesc" class="section-subtitle detail-description">Description text</p>
+
+        <div class="seller-card">
+          <div class="avatar" id="sellerAvatar">AN</div>
+          <div>
+            <strong id="detailSeller">Seller Name</strong>
+            <div id="detailSellerMeta" class="small-muted">seller email and phone</div>
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          <button id="contactButton" class="btn btn-solid-blue" type="button">Contact Seller</button>
+          <a class="btn btn-detail-back" href="browse.html">Back to Browse</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container two-col">
+      <div class="card mini-chat">
+        <h3>Contact Seller</h3>
+        <div id="chatList" class="chat-list"></div>
+        <form id="contactSellerForm" class="chat-form">
+          <textarea id="messageText" placeholder="Write your message to the seller..."></textarea>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div>
+        <h3 style="margin-top:0;">Related Listings</h3>
+        <div id="relatedListings" class="grid-products related-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer section">
+    <div class="container footer-shell">
+      <div class="footer-bottom">
+        <span>© 2026 Campus Marketplace</span>
+        <span>Product details page</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

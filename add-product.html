@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Marketplace | Add Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-logo-wrap">
+            <div class="market-logo">
+              <div class="bag-shape"></div>
+              <div class="cap-top"></div>
+              <div class="cap-line"></div>
+            </div>
+          </div>
+          <div>
+            <div class="brand-title">Campus Marketplace</div>
+            <div class="brand-subtitle">Student Buy & Sell</div>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="browse.html">Browse Listings</a>
+          <a class="nav-link active" href="add-product.html">Add Product</a>
+          <a class="nav-link" href="my-listings.html">My Listings</a>
+          <a class="nav-link admin-only" href="admin-panel.html">Admin Panel</a>
+        </nav>
+
+        <div class="header-icons">
+          <button class="icon-btn" type="button">🔔</button>
+          <a class="icon-btn" href="login.html">👤</a>
+          <button class="icon-btn mobile-menu-btn" type="button">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-intro">
+      <div class="container intro-grid">
+        <div>
+          <h1>Add Product</h1>
+          <p>Create a new student listing with clear details, category, condition, contact number, and optional image upload.</p>
+        </div>
+        <img src="assets/images/student-browse-hero.png" alt="Student hero" class="intro-image" onerror="this.style.display='none'">
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div id="successNotice" class="notice">Your product has been posted successfully. Redirecting to product details...</div>
+
+      <div class="form-grid">
+        <form id="addProductForm" class="form-shell stack">
+          <div>
+            <label for="title">Product Title</label>
+            <input id="title" name="title" type="text" placeholder="Example: Acer Laptop" required />
+          </div>
+
+          <div>
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Write full details about the item..." required></textarea>
+          </div>
+
+          <div class="double-grid">
+            <div>
+              <label for="price">Price (SR)</label>
+              <input id="price" name="price" type="number" min="1" placeholder="180" required />
+            </div>
+
+            <div>
+              <label for="phone">Phone Number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="text"
+                placeholder="05XXXXXXXX"
+                inputmode="numeric"
+                maxlength="10"
+                pattern="[0-9]{10}"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="triple-grid">
+            <div>
+              <label for="category">Category</label>
+              <select id="category" name="category" required>
+                <option value="">Choose...</option>
+                <option>Books</option>
+                <option>Phones</option>
+                <option>Laptops</option>
+                <option>Audio</option>
+                <option>Furniture</option>
+                <option>Tablets</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="condition">Condition</label>
+              <select id="condition" name="condition" required>
+                <option value="">Choose...</option>
+                <option>New</option>
+                <option>Like New</option>
+                <option>Used - Excellent</option>
+                <option>Used - Good</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="image">Upload Image</label>
+              <div class="custom-file-upload">
+                <input id="image" name="image" type="file" accept="image/*" />
+                <label for="image" class="file-upload-btn">Choose File</label>
+                <span id="file-name">No file chosen</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-solid-blue" type="submit">Post Item</button>
+        </form>
+
+        <aside class="sidebar-card side-preview">
+          <h3>Listing Preview</h3>
+          <div class="preview-card stack">
+            <div id="previewFallback" class="preview-box">Image preview will appear here</div>
+            <img id="previewImage" alt="Preview" style="display:none; width:100%; max-height:240px; object-fit:cover; border-radius:20px;" />
+
+            <div>
+              <strong>Posting Tips</strong>
+              <ul class="helper-list">
+                <li>Use a clear and specific product title.</li>
+                <li>Write the real condition and correct price.</li>
+                <li>Share a valid phone number for fast contact.</li>
+                <li>Choose the correct category for better filtering.</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer section">
+    <div class="container footer-shell">
+      <div class="footer-bottom">
+        <span>© 2026 Campus Marketplace</span>
+        <span>Add product page</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

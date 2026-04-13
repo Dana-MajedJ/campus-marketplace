@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Marketplace | Admin Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-logo-wrap">
+            <div class="market-logo">
+              <div class="bag-shape"></div>
+              <div class="cap-top"></div>
+              <div class="cap-line"></div>
+            </div>
+          </div>
+          <div>
+            <div class="brand-title">Campus Marketplace</div>
+            <div class="brand-subtitle">Admin Dashboard</div>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="browse.html">Browse Listings</a>
+          <a class="nav-link" href="add-product.html">Add Product</a>
+          <a class="nav-link" href="my-listings.html">My Listings</a>
+          <a class="nav-link active admin-only" href="admin-panel.html">Admin Panel</a>
+        </nav>
+
+        <div class="header-icons">
+          <button class="icon-btn" type="button">🔔</button>
+          <a class="icon-btn" href="login.html">👤</a>
+          <button class="icon-btn mobile-menu-btn" type="button">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-intro">
+      <div class="container">
+        <h1>Admin Control Panel</h1>
+        <p>Monitor all marketplace activity, review reported posts, approve listings, and manage the latest student messages.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="container stats-grid">
+      <div class="stat-card"><h3>Total Listings</h3><div id="totalListings" class="stat-value">0</div></div>
+      <div class="stat-card"><h3>Active Listings</h3><div id="activeListings" class="stat-value">0</div></div>
+      <div class="stat-card"><h3>Sold Listings</h3><div id="soldListings" class="stat-value">0</div></div>
+      <div class="stat-card"><h3>Reported Listings</h3><div id="reportedListings" class="stat-value">0</div></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container dashboard-grid">
+      <div class="card admin-card">
+        <div class="admin-toolbar">
+          <h2 style="margin:0;">Moderate Listings</h2>
+          <div class="admin-toolbar-controls">
+            <input id="adminSearchInput" type="text" placeholder="Search by title or seller..." />
+            <select id="adminStatusFilter">
+              <option value="">All Status</option>
+              <option value="available">Available</option>
+              <option value="sold">Sold</option>
+              <option value="reported">Reported</option>
+            </select>
+          </div>
+        </div>
+        <div id="adminListings" class="admin-list"></div>
+      </div>
+
+      <div class="card messages-card">
+        <h2 style="margin-top:0;">Recent Messages</h2>
+        <div id="recentMessages" class="recent-messages"></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="reportModal" class="report-modal hidden">
+    <div class="report-box">
+      <h3>Report Product</h3>
+      <label for="reportReason">Select Reason:</label>
+      <select id="reportReason">
+        <option value="">Choose reason...</option>
+        <option value="Fake Product">Fake Product</option>
+        <option value="Wrong Information">Wrong Information</option>
+        <option value="Inappropriate Content">Inappropriate Content</option>
+        <option value="Duplicate Listing">Duplicate Listing</option>
+        <option value="Scam / Fraud">Scam / Fraud</option>
+        <option value="Other">Other</option>
+      </select>
+      <div class="report-actions">
+        <button type="button" id="submitReportBtn">Submit Report</button>
+        <button type="button" id="closeReportBtn" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer section">
+    <div class="container footer-shell">
+      <div class="footer-bottom">
+        <span>© 2026 Campus Marketplace</span>
+        <span>Admin panel page</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
