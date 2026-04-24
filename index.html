@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bubble Market | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header container">
+    <a href="index.html" class="brand"><span class="brand-bubble"></span><span>Marketplace</span></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link" id="nav-index">Home</a>
+      <a href="add-product.html" class="nav-link logged-in-only" id="nav-add">Sell Item</a>
+      <a href="my-listings.html" class="nav-link logged-in-only" id="nav-mine">My Listings</a>
+      <a href="admin-panel.html" class="nav-link admin-only" id="nav-admin">Admin</a>
+      <a href="login.html" class="nav-link guest-only" id="nav-login">Login</a>
+      <a href="#" id="logoutBtn" class="nav-link logged-in-only">Logout</a>
+    </nav>
+  </header>
+
+  <section class="hero container">
+    <h1>Buy & Sell on Campus</h1>
+    <p>The softest, simplest way to trade gear with fellow students.</p>
+  </section>
+
+  <section class="container">
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Search products..." />
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Books">Books</option>
+        <option value="Tablets">Tablets</option>
+        <option value="Audio">Audio</option>
+        <option value="Furniture">Furniture</option>
+      </select>
+      <select id="statusFilter">
+        <option value="">All Status</option>
+        <option value="available">Available</option>
+        <option value="sold">Sold</option>
+      </select>
+      <select id="priceFilter">
+        <option value="">All Prices</option>
+        <option value="0-300">0 - 300 SR</option>
+        <option value="301-1000">301 - 1000 SR</option>
+        <option value="1000+">1000+ SR</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="container">
+    <div id="productsGrid" class="grid-products"></div>
+  </section>
+
+  <footer class="footer"><p>© 2026 Bubble Campus Marketplace</p></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

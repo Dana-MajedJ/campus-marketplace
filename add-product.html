@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sell Item | Bubble Market</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header container">
+    <a href="index.html" class="brand"><span class="brand-bubble"></span><span>Marketplace</span></a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link" id="nav-index">Home</a>
+      <a href="add-product.html" class="nav-link logged-in-only" id="nav-add">Sell Item</a>
+      <a href="my-listings.html" class="nav-link logged-in-only" id="nav-mine">My Listings</a>
+      <a href="admin-panel.html" class="nav-link admin-only" id="nav-admin">Admin</a>
+      <a href="login.html" class="nav-link guest-only" id="nav-login">Login</a>
+      <a href="#" id="logoutBtn" class="nav-link logged-in-only">Logout</a>
+    </nav>
+  </header>
+
+  <main class="container" style="max-width: 600px; margin-top: 40px;">
+    <div class="card" style="padding: 40px;">
+      <h2 style="color: var(--bubble-blue); text-align: center; margin-top: 0;">Post a Bubble</h2>
+      
+      <form id="addForm" style="display: grid; gap: 15px;">
+        <div>
+          <label style="font-weight: 700; margin-bottom: 5px; display: block;">What are you selling?</label>
+          <input type="text" id="addTitle" class="bubble-input" placeholder="Example: Calculus Textbook" required>
+        </div>
+        <div>
+          <label style="font-weight: 700; margin-bottom: 5px; display: block;">Category</label>
+          <select id="addCategory" class="bubble-input" required>
+            <option value="">Select Category...</option>
+            <option value="Books">Books</option>
+            <option value="Tablets">Tablets</option>
+            <option value="Audio">Audio</option>
+            <option value="Furniture">Furniture</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-weight: 700; margin-bottom: 5px; display: block;">Price (SR)</label>
+          <input type="number" id="addPrice" class="bubble-input" placeholder="150" required>
+        </div>
+        <button type="submit" class="btn" style="margin-top: 10px; width: 100%;">Post Item</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer"><p>© 2026 Bubble Campus Marketplace</p></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
